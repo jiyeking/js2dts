@@ -1,5 +1,6 @@
 import * as ts from 'typescript';
 import * as path from 'path';
+import { NamedExports } from 'typescript';
 
 export function formatUrl(url: string) {
   return url.replace(/\\/g, '/');
@@ -204,7 +205,7 @@ export function findExports(source: ts.SourceFile) {
       return;
     } else if (ts.isExportDeclaration(statement) && statement.exportClause) {
       // export { xxxx };
-      statement.exportClause.elements.forEach(spec => {
+      (statement.exportClause as NamedExports).elements.forEach(spec => {
         addExportNode(getText(spec.name), spec.propertyName || spec.name, statement);
       });
 
