@@ -1,5 +1,12 @@
 # js2dts
 
+ this project is fork by https://github.com/whxaxes/js2dts.git , and add features:
+
+ * support dir
+ * support merge d.ts files to one index.d.ts,but only support class declare. [see merge_d_ts_files.py](./merge_d_ts_files.py)
+
+## orgin describ
+
 [![NPM version][npm-image]][npm-url]
 [![Package Quality](http://npm.packagequality.com/shield/js2dts.svg)](http://packagequality.com/#?package=js2dts)
 [![Build Status][travis-image]][travis-url]
